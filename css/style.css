@@ -1,0 +1,412 @@
+/* Gerais */
+body {
+	font-family: "Arial", sans-serif;
+	margin: 0;
+	background-image: url(../img/background2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+
+  /*Em todas as páginas - a classe grid divide o documento HTML em seções*/
+  .grid_container {
+		display: grid;
+		grid-template-areas:
+	  "header"
+	  "main"
+	  "footer";
+		grid-gap: 20px;
+		grid-template-columns: auto;
+  	grid-template-rows: auto auto auto;
+  }
+
+  /* Em todas as páginas - Header*/
+  .header {
+	background-color: #f1f1f1;
+	grid-area: header;
+  }
+
+  /* Header - Logo */
+  .logo img{
+		width: 180px;
+  }
+
+  /* Header - Menu */
+  .menu {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100px;
+		vertical-align: middle;
+  }
+
+  .menu ul{
+	list-style-type: none; /* Tira os itens */
+	margin-right: 60px;
+	height: 90px;
+	display: flex;
+	align-items: center;
+  }
+
+  .menu ul li{
+	display: inline-block; /* Exibe tudo na mesma linha */
+	margin: 0 20px 20px 20px;
+  }
+
+  .menu ul li a {
+	color: #0aadbf;
+	text-decoration: none;
+	font-size: 18px;
+	line-height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	padding: 0.5em 0.5em 0.5em 0.5em;
+  }
+
+  .menu ul li a img {
+	width: 50px;
+	height: 50px;
+  }
+
+  .menu ul li a:hover {
+		border-bottom: 2px solid rgba(10, 173, 191, .8);
+	  color: rgba(10, 173, 191, .8);
+	  cursor: pointer;
+  }
+
+  /* Botões Login e Cadastro */
+  #btn_login {
+	color: #60a333;
+	border: 2px solid #60a333;
+  }
+
+  #btn_login:hover {
+	border: 2px solid rgba(96, 163, 51, .8);
+	  color: rgba(96, 163, 51, .8);
+	  cursor: pointer;
+  }
+
+  #btn_cadastro {
+	border: 2px solid rgb(209, 77, 123);
+	color: #d14d7b;
+  }
+
+  #btn_cadastro:hover {
+	border: 2px solid rgba(209, 77, 123, .8);
+	  color: rgba(209, 77, 123, .8);
+	  cursor: pointer;
+  }
+
+  /* Botão Avatar */
+  #btn_avatar {
+	margin-right: 30px;
+	margin-left: 30px;
+  }
+
+  /* Menu Dropdown */
+
+  li.dropdown {
+		position: relative;
+	  display: inline-block;
+  }
+
+	.dropbtn {
+		color: #0aadbf;
+	  padding: 16px;
+	  font-size: 18px;
+	  border: none;
+	  cursor: pointer;
+		outline: none;
+	}
+
+	.dropbtn img{
+		width: 50px;
+		height: 50px;
+	}
+
+  .dropdown-content {
+		display: none;
+	   position: absolute;
+	   background-color: #f9f9f9;
+	   min-width: 160px;
+	   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	   z-index: 1;
+  }
+
+  .dropdown-content a {
+		color: black;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+  }
+
+  .dropdown-content a:hover {
+		background-color: transparent;
+		cursor: pointer;
+  }
+
+  .dropdown:hover .dropdown-content {
+		display: block;
+  }
+
+	.dropbtn:hover{
+	  border-bottom: 3px solid #0aadbf;
+	}
+
+
+  /* Conteúdo da Main */
+  .main {
+	grid-area: main;
+	display: inline-flex;
+	justify-content: center;
+	vertical-align: middle;
+  }
+
+  /* Conteúdo do Rodapé */
+  .footer {
+	  grid-area: footer;
+	  background-color: #f1f1f1;
+	  text-align: center;
+	  position: fixed;
+	  bottom: 0;
+	  width: 100%;
+  }
+
+  .footer_scroll{
+	  grid-area: footer;
+	  background-color: #f1f1f1;
+	  text-align: center;
+	  position: relative;
+	  bottom: 0;
+	  width: 100%;
+  }
+
+  /* Ranking */
+  table {
+	border-collapse: collapse;
+  }
+
+  td, th {
+	text-align: center;
+	padding: 10px 25px 10px 25px;
+  }
+
+  tr:nth-child(even) {
+	background-color:rgba(209,77,123,.5);
+  }
+
+  /* Formulários */
+  .form_content {
+	background-color: white;
+	padding: 40px;
+  }
+
+  .form_content p{
+  	text-align: center;
+  }
+
+  .form_content a{
+  	text-decoration: none;
+  	font-weight: bold;
+  	color: #0aadbf;
+  }
+
+  .form_content h2{
+	color: rgb(136,80,147);
+	text-transform: uppercase;
+	font-size: 36px;
+	text-align: center;
+  }
+
+   .form_content h3{
+	color: rgb(136,80,147);
+	font-size: 26px;
+	text-align: center;
+	font-weight: normal;
+  }
+
+  .form_content h3{
+	color: rgb(136,80,147);
+	font-size: 18px;
+	text-align: center;
+	font-weight: bold;
+  }
+
+  .form_content .label{
+	font-size: 14px;
+	color: rgb(117, 117, 117);
+  }
+
+  .form_content .label_avatar {
+	border: 2px solid #0aadbf;
+	display: inline-block;
+	border-radius: 50px;
+	padding: 15px;
+  }
+
+   .form_content .label_opcao_tamanho {
+	border: 2px solid #0aadbf;
+	display: inline-block;
+	padding: 15px;
+	font-size: 24px;
+  }
+
+  .form_content .label_avatar:hover, .form_content .label_opcao_tamanho:hover{
+	   background-color: rgba(10,173,191,.5);
+	   cursor: pointer;
+  }
+
+  .form_content hr{
+	width: 50%;
+	border: 1px solid #f1f1f1;
+	margin-bottom: 30px;
+  }
+
+  .form_content input{
+	width: 350px;
+	padding: 12px 10px;
+	margin: 8px 0 30px;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+	border-bottom: 2px solid #0aadbf;
+	outline: none;
+	background-position: 5px 13px;
+	background-repeat: no-repeat;
+	padding-left: 40px;
+  }
+
+  .form_content input:focus {
+	background-color: #f1f1f1;
+   }
+
+  .form_content input[name='user']{
+	background-image: url('../img/icons/add-user.png');
+  }
+
+  .form_content input[name='senha']{
+	background-image: url('../img/icons/lock.png');
+  }
+
+  .form_content input[name='nome']{
+	background-image: url('../img/icons/name.png');
+  }
+
+  .form_content input[name='cpf']{
+	background-image: url('../img/icons/digital.png');
+  }
+
+  .form_content input[name='telefone']{
+	background-image: url('../img/icons/telefone.png');
+  }
+
+  .form_content input[name='email']{
+	background-image: url('../img/icons/email.png');
+  }
+
+  .form_content input[name="avatar"] {
+	width: 50px;
+  }
+
+  .form_content input[name="tamanho"] {
+	visibility: hidden;
+	width: 0px;
+  }
+
+  .form_content input[type="radio"]:checked+label {
+	background-color: rgba(10,173,191,.5);
+  }
+
+  .form_content input[type="submit"] {
+	width: 350px;
+	background-color: rgb(136,80,147);
+	border: 3px solid transparent;
+	color: white;
+	padding: 15px 32px;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 16px;
+	text-transform: uppercase;
+	cursor: pointer;
+  }
+
+  .form_content input[type="submit"]:hover {
+	background-color: white;
+	border: 3px solid rgb(136,80,147);
+	color: rgb(136,80,147);
+	font-weight: bold;
+	cursor: pointer;
+  }
+
+  .form_content button {
+	width: 350px;
+	background-color: rgb(136,80,147);
+	border: 3px solid transparent;
+	color: white;
+	padding: 15px 32px;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 16px;
+	text-transform: uppercase;
+	cursor: pointer;
+  }
+
+  .form_content button:hover {
+	background-color: white;
+	border: 3px solid rgb(136,80,147);
+	color: rgb(136,80,147);
+	font-weight: bold;
+	cursor: pointer;
+  }
+
+  .dados_pessoais, .dados_user {
+	float: left;
+	margin: 30px;
+	border: none;
+  }
+
+  /* Define o tamanho das imagens dos avatares */
+  .dados_user img{
+	width: 50px;
+	height: 50px;
+  }
+
+/* CSS criado após o Javascript */
+.tamanho_tabuleiro {
+    text-align: center;
+}
+
+#canvas_jogo, #dados_partida{
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+#dados_partida {
+  display: inline-grid;
+}
+
+#dados_partida h1 {
+	color: rgb(136,80,147);
+	font-size: 26px;
+	text-align: center;
+	font-weight: bolder;
+	background-color: rgba(255, 255, 255, 0.6);
+	padding: 20px;
+}
+
+#dados_partida p {
+	color: #000000;
+  font-size: 14px;
+	font-weight: bold;
+  text-align: center;
+}
+
+#table_dados_partida {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+#mensagem {
+	    background-color: #0aadbf;
+	    color: white;
+	    font-size: 18px;
+	    line-height: 40px;
+}
